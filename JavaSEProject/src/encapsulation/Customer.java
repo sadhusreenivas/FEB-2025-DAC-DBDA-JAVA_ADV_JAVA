@@ -3,33 +3,22 @@ package encapsulation;
 public class Customer { // fully encapsulated class
 	private int custId;
 	String cname;
-	private double balance;
+	//private double balance;
 	private static String bank = "SBI";
-
-	public Customer(int custId, String cname, double balance) {
+	private Account account; //
+	
+	public Customer(int custId, String cname, Account account) {
 		this.custId = custId;
 		this.cname = cname;
-		this.balance = balance;
+		this.account = account;
 	}
-
-	public int getCustId() {
-		return custId;
+	
+	public void dispCustomer() {
+		System.out.println(custId+" "+cname+" "+bank);
+		System.out.println(account); // account.toString()
 	}
+	
+	
 
-	public String getCname() {
-		return cname;
-	}
-
-	public double getBalance() {
-		return balance;
-	}
-
-	public static String getBank() {
-		return bank;
-	}
-
-	public String toString() {
-		return "Customer [custId=" + custId + ", cname=" + cname + ", balance=" + balance + "Bank= " + bank + "]";
-	}
-
+	
 }
