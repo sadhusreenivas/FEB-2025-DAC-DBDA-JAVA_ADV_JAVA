@@ -2,12 +2,9 @@ package inheritance;
 
 public class TechEmp extends Employee {
 	private int bonus;
-
-	public int getBonus() {
-		return bonus;
-	}
-
-	public void setBonus(int bonus) {
+	
+	public TechEmp(int eid, String ename, double basicPay, int bonus) {
+		super(eid, ename, basicPay);
 		this.bonus = bonus;
 	}
 

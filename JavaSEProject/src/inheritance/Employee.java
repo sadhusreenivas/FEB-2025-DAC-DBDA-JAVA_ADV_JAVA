@@ -5,14 +5,16 @@ public class Employee {
 	  protected double basicPay;
 	  static private String org = "C-DAC";
 	  
-	  public void setEmployee(int eid, String ename, double basicPay) {
-		  this.eid = eid;
-		  this.ename = ename;
-		  this.basicPay = basicPay;
-	  }
-	  public void dispEmployee() {
+	  public Employee(int eid, String ename, double basicPay) {
+		this.eid = eid;
+		this.ename = ename;
+		this.basicPay = basicPay;
+	}
+
+	public void dispEmployee() {
 		  System.out.println(eid+" "+ename+" "+basicPay+" "+org);
 	  }
+	  
 	  public void calSalary() {
 		 double da = 0.53;
 		 double hra = 0.3;
