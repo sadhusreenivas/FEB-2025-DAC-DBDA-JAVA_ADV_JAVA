@@ -8,6 +8,11 @@ public class Outer {
 		void sayHi() {
 			System.out.println("Hello...."+message);
 		}
+	} // inner end
+	
+	public void disp() {
+		Inner in = new Inner();
+		in.sayHi();
 	}
 	
 	public static void main(String[] args) {
@@ -16,6 +21,7 @@ public class Outer {
 		Outer.Inner in = out.new Inner();
 		
 		in.sayHi();
+		out.disp();
 	}
 
 }
