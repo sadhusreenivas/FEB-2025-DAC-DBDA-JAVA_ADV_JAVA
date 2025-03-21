@@ -37,6 +37,8 @@ public class TableDemoApp {
 			}	
 		}.start();
 		
+		Thread t5 = new Thread (() -> t.printTable(15));
+		t5.start();
 		
 	}
 
